@@ -462,7 +462,7 @@ int wifi_start_supplicant(int p2p_supported)
      */
     pi = __system_property_find(supplicant_prop_name);
     if (pi != NULL) {
-        serial = __system_property_serial(pi);
+        serial = pi->serial;
     }
 #endif
     property_get("wifi.interface", primary_iface, WIFI_TEST_INTERFACE);
